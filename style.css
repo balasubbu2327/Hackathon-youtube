@@ -1,0 +1,307 @@
+/* setting global property  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* global property on focus must not show outline */
+*:focus{
+    outline: none;
+}
+/* setting body background and font-family to be used */
+body{
+    position: relative;
+    background-color: #ffffff;
+    font-family: sans-serif;
+}
+/* header section start */
+
+/* fixing the header section in the top so that it stay there on.. */
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 45px;
+    background-color: #f5efef;
+    display: flex;
+    align-items: center;
+    padding: 0 2.5vw;
+}
+/* styleing the menu button */
+.menu{
+    width: 20px;
+    height: 10px;
+    position: relative;
+    cursor: pointer;
+}
+.menu span{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: grey;
+}
+.menu span:nth-child(1){
+    top: 0;
+}
+
+.menu span:nth-child(3){
+    top: 100%;
+}
+/* styling the youtube logo */
+
+.logo{
+    height: 30px;
+    margin: -10px 30px 0;
+}
+
+/* styling the search space */
+
+/* search space starts */
+
+/* styling overall search box */
+
+.search-box{
+    position: relative;
+    max-width: 500px;
+    width: 50%;
+    height: 35px;
+    display: flex;
+}
+/* styling search bar */
+
+.search-bar{
+    width: 85%;
+    height: 100%;
+    border: 1.5px solid #828181;
+    padding: 0 20px;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+/* styling search button */
+
+.search-btn{
+    width: 15%;
+    height: 100%;
+    background:  #b1a5a5;
+    border: 1.5px solid #828181;
+    padding: 5px 0;
+    border-left: none;
+}
+
+/* search space end */
+
+/* user options start */
+
+/* styling the user option space */
+
+.user-options{
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+/* styling the user option icons */
+
+.user-options .icon{
+    /* height: 80%; */
+    margin-right: 20px;
+    cursor: pointer;
+    color: grey;
+}
+/* styling the profile space in the user option space */
+.user-dp{
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    overflow: hidden;
+}
+/* styling the profile image to set proportionate in size with the profile space */
+
+.user-dp img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+/* header section end */
+
+/* side section start */
+
+/* side section styling start */
+
+
+.side-bar{
+    position: fixed;
+    top: 45px;
+    left: 0;
+    min-width: 250px;
+    width: 250px;
+    height: calc(100vh - 60px);
+    background: rgb(238, 237, 237);
+    padding-right: 10px;
+}
+
+/* styling the contents in the side section */
+
+.links{
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    color: #242424;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+}
+/* styling the side section images to the proper size */
+
+.links img{
+    height: 25px;
+    margin-right: 20px;
+}
+
+/* the created link which is hoveres and active shall be slightly contrast to the inactive or not-hovered links */
+
+.links:hover,
+.links.active{
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* styling the horizontal line which seperates the side-sections into two parts */
+
+.seperator{
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+/* side section ends */
+
+
+/* filter start */
+
+
+/* styling the space required for filter section */
+.filters{
+    position: fixed;
+    left: 250px;
+    top: 44px;
+    width: calc(100% - 250px);
+    height: 60px;
+    background: rgb(245, 206, 206);
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+/* shall remove the scrollbar  */
+
+.filters::-webkit-scrollbar{
+    display: none;
+}
+
+/* search based option tags are styled  */
+
+.filter-options{
+    flex: 0 0 auto;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background: #f0f0f0;
+    border: 1px solid #c1c1c1;
+    text-transform: capitalize;
+    margin-right: 10px;
+    color: #242424;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* the active tag shall have some unique color */
+
+.filter-options.active{
+    color: #fff;
+    background: #242424;
+}
+
+/* filter section end */
+
+
+/* video */
+
+/* video section starts */
+
+/* styling the video section which is about to loop */
+
+
+.video-container{
+    width: calc(100% - 250px);
+    margin-top: 120px;
+    margin-left: 250px; 
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-gap: 40px 5px;
+    overflow-x: hidden;
+ }
+ 
+ /* setting the video space dimensions */
+ 
+ .video{
+     min-height: 250px;
+     height: auto;
+ }
+ 
+ /* styling the thumbnail part */
+ 
+ .thumbnail{
+     width: 100%;
+     height: 190px;
+     object-fit: cover;
+ }
+ 
+ /* styling the other content like content video title and the channel name */
+ 
+ .content{
+     width: 100%;
+     height: 100px;
+     padding: 10px;
+     display: flex;
+     justify-content: space-between;
+ }
+ 
+ /* styling the channel icon  */
+ 
+ .channel-icon{
+     width: 40px;
+     height: 40px;
+     border-radius: 50%;
+     object-fit: cover;
+     margin-right: 10px;
+ }
+ 
+ /* styling the title */
+ 
+ .title{
+     width: 100%;
+     height: 110px;
+     font-size:14px;
+     overflow: hidden;
+ }
+ 
+ /* styling the name of the respective user's channel name */
+ 
+ .channel-name{
+     font-size: 10px;
+     margin: 2px 0;
+     color: #979797;
+ }
+ 
+ /* video section end */
